@@ -28,7 +28,7 @@ INSTALLED_APPS += [
 # Your Apps:
 INSTALLED_APPS += [
     "core",
-    "payment",
+    "software",
 ]
 
 MIDDLEWARE = [

@@ -1,0 +1,178 @@
+[
+  {
+    "model": "software.category",
+    "pk": 1,
+    "fields": {
+      "title": "برنامه‌نویسی",
+      "slug": "development",
+      "icon": ""
+    }
+  },
+  {
+    "model": "software.category",
+    "pk": 2,
+    "fields": {
+      "title": "برق و الکترونیک",
+      "slug": "electrical",
+      "icon": ""
+    }
+  },
+  {
+    "model": "software.tag",
+    "pk": 1,
+    "fields": {
+      "title": "IDE",
+      "slug": "ide"
+    }
+  },
+  {
+    "model": "software.tag",
+    "pk": 2,
+    "fields": {
+      "title": "Microsoft",
+      "slug": "microsoft"
+    }
+  },
+  {
+    "model": "software.tag",
+    "pk": 3,
+    "fields": {
+      "title": "CAD",
+      "slug": "cad"
+    }
+  },
+  {
+    "model": "software.software",
+    "pk": 1,
+    "fields": {
+      "title": "Visual Studio Code",
+      "slug": "vscode",
+      "short_description": "محبوب‌ترین ویرایشگر کد دنیا برای تمام زبان‌ها",
+      "cover_image": "software_covers/vscode_placeholder.jpg",
+      "developer": "Microsoft",
+      "category": 1,
+      "download_count": 12500,
+      "description": "ویژوال استودیو کد یک محیط توسعه سبک اما قدرتمند است که روی دسکتاپ شما اجرا می‌شود و برای ویندوز، مک و لینوکس در دسترس است.",
+      "installation_guide": "فایل نصبی را دانلود کرده و مراحل نصب را به سادگی (Next -> Next) طی کنید.",
+      "tags": [1, 2],
+      "created_at": "2024-01-01T12:00:00Z",
+      "updated_at": "2024-01-01T12:00:00Z"
+    }
+  },
+  {
+    "model": "software.feature",
+    "pk": 1,
+    "fields": {
+      "software": 1,
+      "text": "IntelliSense هوشمند و کامل کردن کد"
+    }
+  },
+  {
+    "model": "software.feature",
+    "pk": 2,
+    "fields": {
+      "software": 1,
+      "text": "پشتیبانی داخلی از Git"
+    }
+  },
+  {
+    "model": "software.softwarerelease",
+    "pk": 1,
+    "fields": {
+      "software": 1,
+      "version": "v1.85.1",
+      "platform": "win",
+      "specific_install_guide": "",
+      "is_active": true
+    }
+  },
+  {
+    "model": "software.filepart",
+    "pk": 1,
+    "fields": {
+      "release": 1,
+      "part_number": 1,
+      "download_link": "https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-user",
+      "file_size": "90 MB",
+      "download_count": 500
+    }
+  },
+  {
+    "model": "software.software",
+    "pk": 2,
+    "fields": {
+      "title": "Altium Designer",
+      "slug": "altium-designer",
+      "short_description": "قدرتمندترین نرم‌افزار طراحی بردهای مدار چاپی (PCB)",
+      "cover_image": "software_covers/altium_placeholder.jpg",
+      "developer": "Altium LLC",
+      "category": 2,
+      "download_count": 3400,
+      "description": "نرم‌افزار Altium Designer یک پکیج نرم‌افزاری برای اتوماسیون طراحی الکترونیکی (EDA) است که برای بردهای مدار چاپی (PCB) و همچنین طراحی FPGA استفاده می‌شود.",
+      "installation_guide": "1. اینترنت را قطع کنید.\n2. فایل‌ها را اکسترکت کنید.\n3. فایل نصبی را اجرا کنید.\n4. محتویات پوشه Crack را در محل نصب کپی کنید.",
+      "tags": [3],
+      "created_at": "2024-01-02T12:00:00Z",
+      "updated_at": "2024-01-02T12:00:00Z"
+    }
+  },
+  {
+    "model": "software.feature",
+    "pk": 3,
+    "fields": {
+      "software": 2,
+      "text": "محیط یکپارچه طراحی شماتیک و PCB"
+    }
+  },
+  {
+    "model": "software.feature",
+    "pk": 4,
+    "fields": {
+      "software": 2,
+      "text": "شبیه‌سازی سه بعدی (3D Visualization)"
+    }
+  },
+  {
+    "model": "software.softwarerelease",
+    "pk": 2,
+    "fields": {
+      "software": 2,
+      "version": "24.0.1 Build 32",
+      "platform": "win",
+      "specific_install_guide": "حتما آنتی‌ویروس غیرفعال باشد.",
+      "is_active": true
+    }
+  },
+  {
+    "model": "software.filepart",
+    "pk": 2,
+    "fields": {
+      "release": 2,
+      "part_number": 1,
+      "download_link": "http://dl.university.ac.ir/software/altium/Altium.24.part1.rar",
+      "file_size": "2 GB",
+      "download_count": 120
+    }
+  },
+  {
+    "model": "software.filepart",
+    "pk": 3,
+    "fields": {
+      "release": 2,
+      "part_number": 2,
+      "download_link": "http://dl.university.ac.ir/software/altium/Altium.24.part2.rar",
+      "file_size": "2 GB",
+      "download_count": 115
+    }
+  },
+  {
+    "model": "software.filepart",
+    "pk": 4,
+    "fields": {
+      "release": 2,
+      "part_number": 3,
+      "download_link": "http://dl.university.ac.ir/software/altium/Altium.24.part3.rar",
+      "file_size": "1.4 GB",
+      "download_count": 110
+    }
+  }
+]

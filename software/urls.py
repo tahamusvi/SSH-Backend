@@ -2,10 +2,9 @@ from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 from .views import *
 
-# ---------------------------
-app_name = "payment"
+app_name = "software"
 
 urlpatterns = [
-    path("user/", UserPaymentAPIView.as_view()),
+    # path("user/", UserPaymentAPIView.as_view()),
 ]
 

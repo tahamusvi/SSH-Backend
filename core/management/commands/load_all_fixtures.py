@@ -46,7 +46,7 @@ class Command(BaseCommand):
                 call_command("flush", "--noinput")
 
                 # Load all required fixtures
-                call_command("loaddata", "payment/fixtures/mock_payment.json")
+                call_command("loaddata", "software/fixtures/mock_software.json")
                 
 
             self.stdout.write(
