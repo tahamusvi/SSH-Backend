@@ -11,10 +11,10 @@ if DEBUG:
     SECURE_HSTS_PRELOAD = False
 else:
     CORS_ALLOWED_ORIGINS = [
-        "https://dashboard.ferzz.ir",
+        "https://apitest.fpna.ir",
     ]
     ALLOWED_HOSTS = [
-        "dashboard.ferzz.ir",
+        "apitest.fpna.ir",
     ]
     INTERNAL_IPS = []
     SECURE_HSTS_SECONDS = 31536000  # 1 year in seconds
