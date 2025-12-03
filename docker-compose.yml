@@ -1,0 +1,45 @@
+services:
+  postgres:
+    image: registry.fpna.ir/fpna/common/postgres:16
+    container_name: ssh-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-ssh}
+      POSTGRES_USER: ${POSTGRES_USER:-ssh}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-ssh_password}
+      TZ: Europe/Amsterdam
+    ports:
+      - "5333:5432"
+    volumes:
+      - pg_ssh_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB -h 127.0.0.1"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  app:
+    build: .
+    container_name: ssh-app
+    restart: unless-stopped
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/app
+    env_file:
+      - ./.env
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      postgres:
+        condition: service_healthy
+    ports:
+      - "8123:8000"
+
+
+
+
+
+volumes:
+  pg_ssh_data:
