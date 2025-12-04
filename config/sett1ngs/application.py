@@ -29,6 +29,7 @@ INSTALLED_APPS += [
 INSTALLED_APPS += [
     "core",
     "software",
+    "reports",
 ]
 
 MIDDLEWARE = [
